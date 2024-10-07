@@ -1,0 +1,59 @@
+.dialogOverlay{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.497);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active{
+    opacity: 1;
+}
+.dialogHandle{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 6px;
+}
+.dialogHandle span{
+    display: block;
+    width: 20%;
+    height: 100%;
+    background-color: var(--contrast-color-midle);
+    border-radius: 10px;
+}
+.dialogContent{
+    position: fixed;
+    left: 2vw;
+    bottom: -41%;
+    width: 96vw;
+    padding: 1rem;
+    border: 1px solid var(--secundary-color);
+    background-color: var(--primary-color);
+    touch-action: pan-y;
+    border-radius: 13px 13px 0 0;
+    cursor: grab;
+    transition: bottom 0.5s ease-in-out;
+}
+.active .dialogContent{
+    bottom: 0;
+}
+.drawer__ul{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.drawer__a{
+    color: var(--contrast-color);
+}

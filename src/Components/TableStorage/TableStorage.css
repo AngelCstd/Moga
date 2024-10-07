@@ -1,0 +1,130 @@
+/* Estilos para la tabla de pedidos */
+section.order-table {
+    padding: 0 1.2rem 1.2rem;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.order-table h2 {
+    font-size: 1.8rem;
+    margin: .5rem;
+}
+
+.table-container {
+    background-color: var(--primary-color);
+    padding: 16px;
+    border-radius: 6px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-rows: auto, 1fr;
+    justify-items: stretch;
+    gap: 1rem;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-container .btn {
+    padding: .5rem 1rem;
+}
+
+.table-container .btn:disabled {
+    border: 1px solid var(--contrast-color-midle);
+    color: var(--contrast-color-midle);
+}
+
+.table {
+    width: 100%;
+    height: calc(100vh - 232px);
+    overflow-y: auto;
+    border-radius: 5px;
+    border: 1px solid var(--contrast-color-midle);
+}
+
+.table::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px var(--secundary-color);
+    border: 1px solid var(--contrast-color-midle);
+    border-radius: 4px;
+}
+
+.table::-webkit-scrollbar-thumb {
+    background-color: var(--contrast-color-midle);
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+    min-width: 300px;
+    font-size: .8rem;
+    font-weight: 300;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid var(--contrast-color-midle);
+}
+
+table tr:last-child {
+    border: none;
+}
+
+th {
+    background-color: var(--secundary-color);
+    border-bottom: 1px solid var(--contrast-color-midle);
+    position: sticky;
+    top: 0;
+}
+
+th,
+td {
+    padding: .5rem 1rem;
+    text-align: center;
+}
+
+.status {
+    padding: .2rem .5rem;
+    border-radius: 1rem;
+}
+
+.status.pending {
+    background-color: #ffc107;
+    color: var(--primary-color);
+}
+
+.status.dispatch {
+    background-color: #007bff;
+    color: var(--primary-color);
+}
+
+.status.completed {
+    background-color: #28a745;
+    color: var(--primary-color);
+}
+
+td input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    
+}
+
+tr.active{
+    background-color: var(--contrast-color-midle);
+}
+
+.action-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
